@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>COVID-19</title>
+</head>
+
+<body>
+
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            {% load static %}
+            {% static "img/virus.png" as logo %}
+            <img src="{{ logo }}" width="30" height="30" class="d-inline-block align-top" alt="Logo" loading="lazy">
+            COVID-19
+        </a>
+    </nav>
+
+    <div class="text-center">
+        {% load static %}
+        {% static "gif/covid.gif" as banner %}
+        <img src="{{ banner }}" class="rounded" alt="COVID-19" width="1345px" height="450px" style="padding: 20px;">
+    </div>
+
+    <div class="alert alert-primary" role="alert">
+        <h4 class="alert-heading">O que é COVID-19</h4>
+        <hr>
+        <p style="text-align: justify;">A COVID-19 é uma doença causada pelo coronavírus SARS-CoV-2, que apresenta um
+            quadro clínico que varia de
+            infecções assintomáticas a quadros respiratórios graves. De acordo com a Organização Mundial de Saúde (OMS),
+            a maioria dos pacientes com COVID-19 (cerca de 80%) podem ser assintomáticos e cerca de 20% dos casos podem
+            requerer atendimento hospitalar por apresentarem dificuldade respiratória e desses casos aproximadamente 5%
+            podem necessitar de suporte para o tratamento de insuficiência respiratória (suporte ventilatório).</p>
+    </div>
+
+    <div class="card mb-3" style="max-width: 1500px;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                {% load static %}
+                {% static "gif/coronavirus.gif" as corona %}
+                <img src="{{ corona }}" class="card-img" alt="..." style="height: 290px;">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">O que é o coronavírus?</h5>
+                    <p class="card-text" style="text-align: justify;">Coronavírus é uma família de vírus que causam
+                        infecções respiratórias. O novo
+                        agente do coronavírus foi descoberto em 31/12/19 após casos registrados na China. Provoca a
+                        doença chamada de coronavírus (COVID-19). <br><br>
+
+                        Os primeiros coronavírus humanos foram isolados pela primeira vez em 1937. No entanto, foi em
+                        1965 que o vírus foi descrito como coronavírus, em decorrência do perfil na microscopia,
+                        parecendo uma coroa. <br><br>
+
+                        A maioria das pessoas se infecta com os coronavírus comuns ao longo da vida, sendo as crianças
+                        pequenas mais propensas a se infectarem com o tipo mais comum do vírus. Os coronavírus mais
+                        comuns que infectam humanos são o alpha coronavírus 229E e NL63 e beta coronavírus OC43, HKU1.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-light" role="alert">
+        <h4 class="alert-heading">Principais sintomas</h4>
+        <hr>
+        <p>Os sintomas mais comuns da COVID-19 são:</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card" style="width: 12rem; height: 12rem; padding: 5px;">
+                        {% load static %}
+                        {% static "img/tosse.png" as tosse %}
+                        <img src="{{ tosse }}" alt="..." class="rounded-circle border" width="100" height="100"
+                            style="margin: auto; padding: 2px;">
+                        <div class="card-body mx-auto">
+                            <h6 class="card-title">TOSSE</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" style="width: 12rem; height: 12rem; padding: 5px;">
+                        {% load static %}
+                        {% static "img/febre.png" as febre %}
+                        <img src="{{ febre }}" alt="..." class="rounded-circle border" width="100" height="100"
+                            style="margin: auto; padding: 2px;">
+                        <div class="card-body mx-auto">
+                            <h6 class="card-title">FEBRE</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" style="width: 12rem; height: 12rem; padding: 5px;">
+                        {% load static %}
+                        {% static "img/coriza.png" as coriza %}
+                        <img src="{{ coriza }}" alt="..." class="rounded-circle border" width="100" height="100"
+                            style="margin: auto; padding: 2px;">
+                        <div class="card-body">
+                            <h6 class="card-title mx-auto" align="center">CORIZA</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" style="width: 12rem; height: 12rem; padding: 5px;">
+                        {% load static %}
+                        {% static "img/garganta.png" as garganta %}
+                        <img src="{{ garganta }}" alt="..." class="rounded-circle border" width="100" height="100"
+                            style="margin: auto; padding: 2px;">
+                        <div class="card-body">
+                            <h6 class="card-title mx-auto" align="center">DOR DE GARGANTA</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" style="width: 12rem; height: 12rem; padding: 5px;">
+                        {% load static %}
+                        {% static "img/respirador.png" as respirador %}
+                        <img src="{{ respirador }}" alt="..." class="rounded-circle border" width="100" height="100"
+                            style="margin: auto; padding: 2px;">
+                        <div class="card-body">
+                            <h6 class="card-title mx-auto" align="center">DIFICULDADE PARA RESPIRAR</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr style="border-style: dashed;">
+
+    <div class="alert alert-light" role="alert">
+        <h4 class="alert-heading">Formas de transmissão</h4>
+        <hr>
+        <p>A transmissão pode acontecer de uma pessoa contaminada para outra ou por meio de:</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card" style="width: 12rem; height: 12rem; padding: 5px;">
+                        {% load static %}
+                        {% static "img/maos.png" as maos %}
+                        <img src="{{ maos }}" alt="..." class="rounded-circle border" width="100" height="100"
+                            style="margin: auto; padding: 2px;">
+                        <div class="card-body mx-auto">
+                            <h6 class="card-title">TOQUE OU APERTO DE MÃO</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" style="width: 12rem; height: 12rem; padding: 5px;">
+                        {% load static %}
+                        {% static "img/saliva.png" as saliva %}
+                        <img src="{{ saliva }}" alt="..." class="rounded-circle border" width="100" height="100"
+                            style="margin: auto; padding: 2px;">
+                        <div class="card-body mx-auto">
+                            <h6 class="card-title">GOTÍCULAS DE SALIVA</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" style="width: 12rem; height: 12rem; padding: 5px;">
+                        {% load static %}
+                        {% static "img/espirro.png" as espirro %}
+                        <img src="{{ espirro }}" alt="..." class="rounded-circle border" width="100" height="100"
+                            style="margin: auto; padding: 2px;">
+                        <div class="card-body">
+                            <h6 class="card-title mx-auto" align="center">ESPIRRO</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" style="width: 12rem; height: 12rem; padding: 5px;">
+                        {% load static %}
+                        {% static "img/tosse.png" as tosse %}
+                        <img src="{{ tosse }}" alt="..." class="rounded-circle border" width="100" height="100"
+                            style="margin: auto; padding: 2px;">
+                        <div class="card-body">
+                            <h6 class="card-title mx-auto" align="center">TOSSE</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" style="width: 12rem; height: 12rem; padding: 5px;">
+                        {% load static %}
+                        {% static "img/catarro.png" as catarro %}
+                        <img src="{{ catarro }}" alt="..." class="rounded-circle border" width="100" height="100"
+                            style="margin: auto; padding: 2px;">
+                        <div class="card-body">
+                            <h6 class="card-title mx-auto" align="center">CATARRO</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" style="width: 12rem; height: 12rem; padding: 5px;">
+                        {% load static %}
+                        {% static "img/contaminados.png" as contaminados %}
+                        <img src="{{ contaminados }}" alt="..." class="rounded-circle border" width="100" height="100"
+                            style="margin: auto; padding: 2px;">
+                        <div class="card-body">
+                            <h6 class="card-title mx-auto" align="center">OBJETOS CONTAMINADOS</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr style="border-style: dashed;">
+
+    <div class="alert alert-light" role="alert">
+        <h4 class="alert-heading">Como de proteger!</h4>
+        <hr>
+        <p>As recomendações para se previnir da COVID-19 são:</p>
+        <ul class="list-group" style="padding: 20px;">
+            <li class="list-group-item">Lave com frequência as mãos até a altura dos punhos, com água e sabão, ou então
+                higienize com álcool em gel 70%.</li>
+            <li class="list-group-item">Ao tossir ou espirrar, cubra nariz e boca com lenço ou com o braço, e não com as
+                mãos.</li>
+            <li class="list-group-item">Evite tocar olhos, nariz e boca com as mãos não lavadas.</li>
+            <li class="list-group-item">Ao tocar, lave sempre as mãos como já indicado.</li>
+            <li class="list-group-item">Mantenha uma distância mínima de cerca de 2 metros de qualquer pessoa tossindo
+                ou espirrando.</li>
+            <li class="list-group-item">Evite abraços, beijos e apertos de mãos. Adote um comportamento amigável sem
+                contato físico, mas sempre com um sorriso no rosto.</li>
+            <li class="list-group-item">Higienize com frequência o celular e os brinquedos das crianças.</li>
+            <li class="list-group-item">Não compartilhe objetos de uso pessoal, como talheres, toalhas, pratos e copos.
+            </li>
+            <li class="list-group-item">Mantenha os ambientes limpos e bem ventilados.</li>
+            <li class="list-group-item">Evite circulação desnecessária nas ruas, estádios, teatros, shoppings, shows,
+                cinemas e igrejas. Se puder, fique em casa.</li>
+            <li class="list-group-item">Se estiver doente, evite contato físico com outras pessoas, principalmente
+                idosos e doentes crônicos, e fique em casa até melhorar.</li>
+            <li class="list-group-item">Durma bem e tenha uma alimentação saudável.</li>
+            <li class="list-group-item">Utilize máscaras caseiras ou artesanais feitas de tecido em situações de saída
+                de sua residência. </li>
+        </ul>
+    </div>
+
+
+    <footer class="page-footer font-small teal pt-4 alert-primary">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <h5 class="text-uppercase font-weight-bold">Sobre</h5>
+                    <p>Este app foi elaborado a partir de conhecimentos básicos sobre o framework, Django, com o intuito
+                        de debater um pouco sobre a pandemia do Coronavírus no mundo.</p>
+                    <p><em><a href="https://www.djangoproject.com/">Django</a></em></p>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-6 mb-md-0 mb-3">
+                    <h5 class="text-uppercase font-weight-bold">Informações</h5>
+                    <p>Todas as informações contidas nesta página foram retiradas do site do Ministério da Saúde, ou
+                        seja, de uma fonte confiável.</p>
+                    <p><em><a href="https://coronavirus.saude.gov.br/sobre-a-doenca#o-que-e-covid">Ministério da Saúde -
+                                Coronavírus</a></em></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3 bg-primary">
+            © 2020 Copyright
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    </script>
+</body>
+
+</html>
